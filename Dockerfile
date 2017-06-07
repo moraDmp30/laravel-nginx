@@ -2,7 +2,7 @@ FROM ej52/alpine-nginx-php:latest
 LABEL autor = "Daniel Mora Pastor"
 
 RUN apk update && \
-    apk install memcached
+    apk add memcached
 
 RUN rm /etc/nginx/conf.d/default.conf
 COPY default.conf /etc/nginx/conf.d/default.conf
